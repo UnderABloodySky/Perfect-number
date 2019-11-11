@@ -13,7 +13,7 @@ public class ThreadPool {
 
         private synchronized void createWorkers(int _quantityWorker){
             for(int i = 0; i < _quantityWorker; i++){
-                Worker aWorker = new Worker(myBuffer);
+                PerfectWorker aWorker = new PerfectWorker(myBuffer);
                 aWorker.start();
             }
         }

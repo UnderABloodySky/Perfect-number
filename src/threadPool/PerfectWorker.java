@@ -2,10 +2,10 @@ package threadPool;
 
 import buffer.Buffer;
 
-public class Worker extends Thread {
+public class PerfectWorker extends Thread {
     private Buffer aBuffer;
 
-    public Worker(Buffer _buffer){
+    public PerfectWorker(Buffer _buffer){
         aBuffer = _buffer;
     }
 
