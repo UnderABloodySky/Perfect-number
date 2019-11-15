@@ -11,7 +11,7 @@ public class PerfectNumberTaskFactory {
 		
 	}
 	
-	public void createPerfectNumberTask(List<BigInteger> result, BigInteger numberToPerfect) {
+	public void createPerfectNumberTask(BufferPerfect result, BigInteger numberToPerfect) {
 		PerfectNumberTask task = new PerfectNumberTask(result, numberToPerfect);
 		mySearcherPerfectNumber.launchPerfectNumberTask(task);
 		

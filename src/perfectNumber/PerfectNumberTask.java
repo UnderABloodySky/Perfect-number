@@ -6,34 +6,48 @@ import java.util.List;
 import threadPool.Task;
 
 public class PerfectNumberTask extends Task implements Runnable {
-	private List<BigInteger> result;
+	private BufferPerfect result;
 	private BigInteger numberPerf;
 	
-	public PerfectNumberTask(List<BigInteger> _result, BigInteger numberToPerfect) {
+	public PerfectNumberTask(BufferPerfect _result, BigInteger numberToPerfect) {
 		result = _result;
 		numberPerf = numberToPerfect;
 	}
 
-	//implementar aca lo de la operacion de ver si es perfect
+	
 	@Override
 	public void run() {
 		this.perfectNumber(result, numberPerf);
 		
 	}
 	
-	private void perfectNumber(List<BigInteger> result, BigInteger numberToPerfect) {
+	private void perfectNumber(BufferPerfect result, BigInteger numberToPerfect) {
 		BigInteger cero = new BigInteger("0");
 		BigInteger one = new BigInteger("1");
 		BigInteger divs = new BigInteger("0");
 		
 		for (BigInteger div= one; div.compareTo(numberToPerfect)<0; div=div.add(one)) {
-			if(numberToPerfect.mod(div) == cero) {
+			//System.out.println(div.toString());
+			if((numberToPerfect.mod(div)).equals(cero)) {
 				divs=divs.add(div);
+			//System.out.println(divs.toString());	
 			}
+			
 		}
-		if(divs == numberToPerfect) {
-			result.add(numberToPerfect);//ver si esta bien esto,si podria darse un error en la lista
+			//System.out.println(divs.toString());
+			if(divs.equals(numberToPerfect)) {
+			result.addPerfect(numberToPerfect);
+			//System.out.println(result.listPerfect().toString());
 		}
+			//System.out.println(result.listPerfect().toString());	
+	}
+	
+	public boolean isNegative() {
+		BigInteger oneNeg = new BigInteger("-1");
+		boolean result= numberPerf.equals(oneNeg);
+		return result;
 	}
 	
 }
+
+
