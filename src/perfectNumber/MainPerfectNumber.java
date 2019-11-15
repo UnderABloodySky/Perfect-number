@@ -22,7 +22,7 @@ public class MainPerfectNumber {
 		listToSearch = generatePossiblePerfects(); 
 		System.out.print(listToSearch.toString());
 		
-		searcher = new SearcherPerfectNumber(10,10);
+		searcher = new SearcherPerfectNumber(200,10);
 		List<BigInteger> perfectList = searcher.search(listToSearch);
 		System.out.println("numeros perfectos");
 		System.out.println(perfectList.toString());
