@@ -27,19 +27,19 @@ public class PerfectNumberTask extends Task implements Runnable {
 		BigInteger divs = new BigInteger("0");
 		
 		for (BigInteger div= one; div.compareTo(numberToPerfect)<0; div=div.add(one)) {
-			//System.out.println(div.toString());
+			
 			if((numberToPerfect.mod(div)).equals(cero)) {
 				divs=divs.add(div);
-			//System.out.println(divs.toString());	
+				
 			}
 			
 		}
-			//System.out.println(divs.toString());
+			
 			if(divs.equals(numberToPerfect)) {
 			result.addPerfect(numberToPerfect);
-			//System.out.println(result.listPerfect().toString());
+			
 		}
-			//System.out.println(result.listPerfect().toString());	
+				
 	}
 	
 	public boolean isNegative() {

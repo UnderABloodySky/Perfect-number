@@ -17,7 +17,7 @@ public class ConvenientBarrier {
 	            catch (InterruptedException e) {
 	                e.printStackTrace();
 	            }
-	            //notifyAll();
+	            
 	        }
 	        notifyAll();
 	    }

@@ -29,7 +29,7 @@ public class ThreadPool {
             myBuffer.write(aTask);
         }
         
-//        ver si no tiene q esperar aca el thread principal
+
         public synchronized void stop(BufferPerfect result){
             this.addNeg(result);
             myBarrier.waiting();

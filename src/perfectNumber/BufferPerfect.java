@@ -9,10 +9,10 @@ public class BufferPerfect {
 	
 	public synchronized void addPerfect(BigInteger perf) {
 		listPerfect.add(perf);
-		//System.out.println(listPerfect.toString());
+		
 	}
 	
-	//con esto se va a hacer el print
+	
 	public List<BigInteger> listPerfect(){
 		return listPerfect;
 		

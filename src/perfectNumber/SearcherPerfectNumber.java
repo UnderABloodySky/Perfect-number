@@ -21,7 +21,7 @@ public class SearcherPerfectNumber {
     	for (int num = 0; num < numbers; num++) {
     		factory.createPerfectNumberTask(result,listToSearch.get(num));
     	}
-    	//aca tiene q ir el stop para todos los threads
+    	
     	myThreadPool.stop(result);
     	return result.listPerfect(); 
     }

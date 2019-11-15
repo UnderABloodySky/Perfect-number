@@ -19,14 +19,9 @@ public class MainPerfectNumber {
 	
 	public static void main(String[] args) {
 		tInicio=System.currentTimeMillis();
-		//BigInteger firstPerfect = new BigInteger("6");
-		//BigInteger seventhPerfect = new BigInteger("33550336");
 		listToSearch = generatePossiblePerfects(); 
 		System.out.print(listToSearch.toString());
-		//listToSearch.add(firstPerfect);
-		//listToSearch.add(seventhPerfect);
-//		listToSearch.add(tree);
-
+		
 		searcher = new SearcherPerfectNumber(10,10);
 		List<BigInteger> perfectList = searcher.search(listToSearch);
 		System.out.println("numeros perfectos");
